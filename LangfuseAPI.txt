@@ -1,0 +1,7 @@
+Secret Key: sk-lf-d521fb25-384e-4808-b037-63a546f469d4
+Public key: pk-lf-51fe19ac-b535-472f-a1af-23d94da611d9
+.env: LANGFUSE_SECRET_KEY="sk-lf-d521fb25-384e-4808-b037-63a546f469d4"
+LANGFUSE_PUBLIC_KEY="pk-lf-51fe19ac-b535-472f-a1af-23d94da611d9"
+LANGFUSE_BASE_URL="https://cloud.langfuse.com"
+
+For MCP Server: Authorization: Basic cGstbGYtNTFmZTE5YWMtYjUzNS00NzJmLWExYWYtMjNkOTRkYTYxMWQ5OnNrLWxmLWQ1MjFmYjI1LTM4NGUtNDgwOC1iMDM3LTYzYTU0NmY0NjlkNA==
