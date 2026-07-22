@@ -149,9 +149,9 @@ pip install -r requirement.txt
 Create a `.env` file in the project root with your own credentials (do **not** commit real keys):
 
 ```env
-LANGFUSE_SECRET_KEY="your-langfuse-secret-key"
-LANGFUSE_PUBLIC_KEY="your-langfuse-public-key"
-LANGFUSE_BASE_URL="https://cloud.langfuse.com"
+LANGFUSE_SECRET_KEY=""
+LANGFUSE_PUBLIC_KEY=""
+LANGFUSE_BASE_URL=""
 LLM_Model="llama3"
 ```
 
