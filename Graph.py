@@ -1,7 +1,8 @@
 from typing import Optional, Dict, List
 from pydantic import BaseModel, Field
 from User_query import GraphState
-
+from langfuse.langchain import CallbackHandler
+callbackhandler=CallbackHandler()
 from agents.GaurdrailAgent import Gaurdrail_Agent
 
 def gaurd_rail_node(state: GraphState):
@@ -88,12 +89,14 @@ API:
 {state.api_result}
 
 """
-
-    response = rag_chain.invoke(prompt)
+    response=""
+    for chunk in rag_chain.stream(prompt,config={"callbacks": [callbackhandler]}):
+        print(chunk,end="")
+        response+=chunk
 
     state.final_answer = response
-
     return state
+
 def route(state: GraphState):
 
     if state.intent == "payroll":

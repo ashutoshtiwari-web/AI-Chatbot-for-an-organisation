@@ -35,7 +35,7 @@ Context:
 {context}
 Question: {question}
 Answer in Markdown:""")
-llm=ChatOllama(model="llama3",Temperature=0)
+llm=ChatOllama(model="llama3",Temperature=0,streaming=True)
 #pipeline
 rag_chain=({"context": retriever | doc_format, "question": RunnablePassthrough()} | rag_prompt | llm| StrOutputParser()
            )
